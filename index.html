@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Аткритка</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="orb orb-a" aria-hidden="true"></div>
+    <div class="orb orb-b" aria-hidden="true"></div>
+
+    <main class="card" id="card">
+      <h1>8 Марта</h1>
+      <p class="subtitle">Нажмітє сука</p>
+
+      <div
+        class="photo-frame"
+        id="photoFrame"
+        tabindex="0"
+        role="button"
+        aria-label="Відкрить поздоровлення"
+      >
+        <img id="slideImage" alt="Фото поздравления" />
+      </div>
+
+      <div class="controls">
+        <button id="nextBtn" type="button">Відкрить піздоровлення</button>
+        <span class="progress" id="progress"></span>
+      </div>
+      <p class="hint">Сначала паздравлєніє патом шота далі</p>
+    </main>
+
+    <div class="modal" id="messageModal" aria-hidden="true">
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
+
+        <div class="reaction-bar">
+          <button
+            class="reaction-btn active"
+            type="button"
+            data-reaction="like"
+            title="Лайк"
+            aria-label="Лайк"
+          >
+            👍
+          </button>
+          <button
+            class="reaction-btn"
+            type="button"
+            data-reaction="dislike"
+            title="Дизлайк"
+            aria-label="Дизлайк"
+          >
+            👎
+          </button>
+          <button
+            class="reaction-btn"
+            type="button"
+            data-reaction="poop"
+            title="Какашка"
+            aria-label="Какашка"
+          >
+            💩
+          </button>
+          <button
+            class="reaction-btn"
+            type="button"
+            data-reaction="boom"
+            title="Взрыв"
+            aria-label="Взрыв"
+          >
+            💥
+          </button>
+        </div>
+
+        <h2 class="modal-title" id="modalTitle">Піздоровлення</h2>
+        <p class="modal-text" id="modalText"></p>
+
+        <div class="modal-actions">
+          <button class="modal-btn" id="modalNextBtn" type="button">
+            Далі сука
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="flash" aria-hidden="true"></div>
+    <div id="confetti-layer" aria-hidden="true"></div>
+    <div id="reaction-layer" aria-hidden="true"></div>
+
+    <section class="finale" id="finale" aria-hidden="true">
+      <div class="finale-inner" id="finaleInner">
+        <h2>С 8 Марта дєтка ти такая сладкая канфєтка</h2>
+        <p>Пусть кожен дєнь будєт атлічним</p>
+      </div>
+    </section>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
